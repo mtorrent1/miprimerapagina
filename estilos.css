@@ -1,0 +1,173 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    background-color: red;
+    color: white;
+}
+
+h2{
+    background-color: rgb(82, 214, 82);
+}
+
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+    
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .column {
+    flex: 100%;
+    }
+}
+
+/* DESAFÍO DEL DÍA 7 */
+
+/* Contenedor de la barra de Navegación */
+.container-nav {
+    display: flex; /* Comportamiento adaptable y flexible */
+    padding: 10px;
+    height: 50px;
+    background-color: black;
+    }
+    
+/* Barra de navegación */    
+.navbar {
+    display: flex; /* Comportamiento adaptable y flexible */
+    justify-content: space-between;  /* los elementos ( items ) aparecen distribuidos uniformemente:
+    al principio, en el centro y al final del contenedor */
+    width: 100%;
+    background-color: red;
+}
+
+/* Marca / Nombre del sitio */
+.brand {
+    display: flex; /* Comportamiento adaptable y flexible */
+    align-items: center;
+    margin-left: 20px;
+}
+
+li>a {
+    padding: 8px 24px;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Lista desordenada de la navBar */
+.nav-links {
+    display: flex; /* Comportamiento adaptable y flexible */
+    align-items: center;
+}
+
+/* Botón "Menú" */
+.button-menu-toggle {
+    display: none; /* Lo ocultamos */
+}
+
+/* En dispositivos de hasta 768px de ancho */
+@media (max-width: 768px) {
+    
+    /* Adaptamos las columnas */
+    .column {
+    flex: 100%;
+    }
+
+    /* No mostramos las secciones / enlaces de la navBar */
+.nav-links {
+    display: none;
+    }
+
+    /* Mostramos el botón "Menú" */
+.button-menu-toggle {
+    display: block;
+    background-color: white;
+    border:none;
+    border-radius: 50px;
+    padding: 0 24px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    }
+
+    /* NavLinks en responsive (asociados al botón "Menú") */ 
+.nav-links.nav-links-responsive {
+    position: absolute;
+    display: flex;
+    background-color: rgba(20,20,20,0.95);
+    width: 100%;
+    height: 100%;
+    top: 70px;
+    left: 0;
+    flex-direction: column;
+    padding-top: 200px;
+    align-items: center;
+    gap:70px;
+    font-size: 40px;
+    }
+}
+
+/* ENCUENTRO 8 */
+
+#container_imagenes{
+    display: flex;  /* Comportamiento adaptable y flexible */
+    flex-direction: column; /* Distribución de elementos en forma de columna */
+    align-items: center;    /* Elementos alineados al centro */
+}
+
+#container_imagenes img{
+    margin: 20px;
+    border: 5px dashed yellow;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px white;
+}
+
+footer{
+    min-height: 200px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    margin-top: 25px;
+}
